@@ -1,0 +1,23 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write # Permissão necessária para publicar no gh-pages
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # AQUI entra o trecho que você estava tentando usar
+      - name: Deploy React to GitHub Pages
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Adicione outras configurações necessárias aqui, como build_dir se necessário
