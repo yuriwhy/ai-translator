@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Translator",
+  "description": "A high-fidelity translation application powered by Gemini 3 Pro Preview, supporting nearly 100 languages with automatic language detection.",
+  "requestFramePermissions": []
+}
